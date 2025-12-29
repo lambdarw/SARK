@@ -1,9 +1,13 @@
-# Readme
+## 📎Readme
 This repository provides an example script for reranking inference using the SPAR reranker model.
 
 You can get the model files from the ```./model``` path, and download the ```model.safetensors``` file from [quark site](https://pan.quark.cn/s/d04abca325d9)
 
-## Model Files
+## 📂 Model Files
+Here are the main files. 
+
+Please run the model following the ```model/``` files and evaluate the results following ```eval/``` files.
+
 ```md
 ├── model/                      # all the model files
 │   ├── config.json
@@ -13,6 +17,9 @@ You can get the model files from the ```./model``` path, and download the ```mod
 │   ├── special_tokens_map.json
 │   ├── tokenizer.json
 │   └── tokenizer_config.json
+├── eval/                      # eval the reranker
+│   ├── llm_eval.py            # use the llm eval the results
+│   └── score_eval.py          # eval the model results score
 └── data/                       # the testing data examples
     └── test_sampled_50.jsonl
 ```
