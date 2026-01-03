@@ -1,10 +1,10 @@
-# SPAR
+# SCOR
 ## 📌 Overview
 
-SPAR is the first style-robust preference-aware reranking model, which integrates LLM-derived knowledge preference signals with style-invariant training, capturing content relevance under stylistic perturbations.
+SCOR is the first style-robust preference-aware reranking model, which integrates LLM-derived knowledge preference signals with style-invariant training, capturing content relevance under stylistic perturbations.
 
 <div align=center>
-<img src="https://github.com/lambdarw/SPAR/blob/main/framework.png" width="70%" >
+<img src="https://github.com/lambdarw/SCOR/blob/main/framework.png" width="70%" >
 </div>
 
 ## 🧷 Data preparation
@@ -12,7 +12,7 @@ We evaluate our method on the stylistic NQ dataset. Examples are provided in the
 
 
 ## 🗒️ Model Files
-This repository provides an example script for reranking inference using the SPAR reranker model.
+This repository provides an example script for reranking inference using the SCOR reranker model.
 
 You can get the model files from the ```./model``` path, and download the ```model.safetensors``` file from [quark site](https://pan.quark.cn/s/d04abca325d9)
 
@@ -75,6 +75,6 @@ print(scores)
 ```
 
 ## 📃 Citation
-Please cite our repository if you use SPAR in your work.
+Please cite our repository if you use SCOR in your work.
 ```bibtex
 ```
