@@ -17,9 +17,7 @@ Please run the model following the ```model/``` files and evaluate the results f
 │   ├── special_tokens_map.json
 │   ├── tokenizer.json
 │   └── tokenizer_config.json
-├── eval/                      # eval the reranker
-│   ├── llm_eval.py            # use the llm eval the results
-│   └── score_eval.py          # eval the model results score
-└── data/                       # the testing data examples
-    └── test_sampled_50.jsonl
+└── eval/                      # eval the reranker
+    ├── llm_eval.py            # use the llm eval the results
+    └── score_eval.py          # eval the model results score
 ```
