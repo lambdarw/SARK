@@ -39,7 +39,7 @@ Step1: To set up, you can use the following command lines to set up Python 3.10 
 pip install -r requirements.txt
 ```
 
-Step2: If you want to run the program, this is a batch size fun():
+Step2: If you want to run the program, follow this:
 
 ``` python
 from transformers import AutoModel, AutoTokenizer
