@@ -1,0 +1,38 @@
+[
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample1",
+        "label": 0,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    },
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample2",
+        "label": 1,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    },
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample3",
+        "label": 0,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    },
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample4",
+        "label": 1,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    },
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample5",
+        "label": 1,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    },
+    {
+        "query": "Does xxx think being a celebrity is more stressful?",
+        "passage": "sample6",
+        "label": 0,
+        "candidate_passages": ["sample5", "sample3", "sample6", "sample2", "sample1", "sample4"]
+    }
+]
