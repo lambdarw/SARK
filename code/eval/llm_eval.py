@@ -64,7 +64,6 @@ def write2file(outputs, wfile, res, type):
     with open(wfile, 'w', encoding='utf-8') as f:
         json.dump(res, f, indent=4)
 
-    print("成功写入")
 
 def myPrompt(question, context=None):
     if context: 
