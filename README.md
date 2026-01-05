@@ -14,7 +14,7 @@ We evaluate our method on the stylistic NQ dataset. Examples are provided in the
 ## 🗒️ Model Files
 This repository provides an example script for reranking inference using the SARK reranker model.
 
-You can get the model files from the ```./model``` path, and download the ```model.safetensors``` file from [quark site](). (To comply with privacy policies, the links will be made public after acceptance.)
+You can get the model files from the ```./model``` path, and download the ```model.safetensors``` file from quark site. (To comply with privacy policies, the links will be made public after acceptance.)
 
 Please run the model following the ```model/``` files and evaluate the results following ```eval/``` files.
 
