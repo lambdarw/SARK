@@ -69,9 +69,9 @@ inputs = {k: v.to('cuda') for k, v in inputs.items()}
 
 with torch.no_grad():
     logits = model(**inputs)
-    SARKes = logits.cpu().tolist()
+    scores = logits.cpu().tolist()
 
-print(SARKes)
+print(scores)
 ```
 
 ## 📃 Citation
