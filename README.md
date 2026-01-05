@@ -1,7 +1,7 @@
 # SARK
 ## 📌 Overview
 
-SARK is the first style-robust preference-aware reranking model, which integrates LLM-derived knowledge preference signals with style-invariant training, capturing content relevance under stylistic perturbations.
+SARK is the first Style-Adaptive Reranker with Knowledge Prioritization, which prevents the model from overfitting to specific writing styles while retaining sensitivity to core evidence.
 
 <div align=center>
 <img src="https://github.com/lambdarw/SARK/blob/main/framework.png" width="70%" >
