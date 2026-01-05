@@ -29,7 +29,7 @@ Please run the model following the ```model/``` files and evaluate the results f
 │   └── tokenizer_config.json
 └── eval/                      # eval the reranker
     ├── llm_eval.py            # use the llm eval the results
-    └── SARKe_eval.py          # eval the model results SARKe
+    └── SARKe_eval.py          # eval the model results score
 ```
 
 ## 🚀 Quick Start
