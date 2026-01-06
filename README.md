@@ -53,8 +53,8 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModel.from_pretrained(model_path, trust_remote_code=True).cuda().eval()
 model.eval()
 
-query = "what is the capital of China?"
-passages = ["Beijing is the capital of China.", "Shanghai is the largest city in China.", "Chengdu is the largest city in China."]
+query = "what is the capital of the US?"
+passages = ["Washington is the capital of the US.", "Alabama is the largest city in the US.", "California is the largest city in the US."]
 
 queries_expanded = [query] * len(passages)
 
