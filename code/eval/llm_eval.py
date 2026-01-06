@@ -6,9 +6,6 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '1,2,3,4'
 
 model = 'Qwen2.5-14B-Instruct'
-# model = 'Qwen2.5-7B-Instruct'
-# model = 'Llama-3.1-8B-Instruct'
-# model = 'gemma-3-12b-it'
 
 tokenizer = AutoTokenizer.from_pretrained(model)
 
@@ -16,18 +13,9 @@ sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=2048)
 
 llm = LLM(model=model,  
         tensor_parallel_size=4,
-        # max_model_len: informal 3000  6144  8192 
-        # max_model_len: formal 3000(5/10) 6144(20) 7168(30) 9216(40) 11264(50)  
         max_model_len=11264,
         enforce_eager=True, 
         gpu_memory_utilization=0.9)
-
-
-prompt = 'Transform the following formal paragraph in an informal tone.' \
-             'Use everyday language, emotional expressions, or rhetorical flair. ' \
-             'Ensure the output is 80-120 words. DO NOT INCLUDE ANYTHING ELSE. ' \
-             'Now transform this: '
-
 
 def load_concatenated_json(path):
     decoder = json.JSONDecoder()
@@ -244,18 +232,15 @@ def calculateAcc(path):
 
 
 if __name__ == "__main__":
-    base_path = ''
-    model = 'qwen'
-
-    methods = ['ours']  
+    model = 'qwen' 
     ttype = 'informal'  # informal  formal  sample50
     nums = [5, 10, 20, 30, 40, 50]
     
     for method in methods:
         print(f"--------Evaling {method}--------")
         for num in tqdm(nums):
-            input_path = f'{base_path}/{ttype}/{method}/test_rerank_style_{ttype}.json'
-            output_path = f'{base_path}/{ttype}/{method}/{method}_test_{ttype}_top{num}_{model}.json'
+            input_path = f'./test_rerank_style_{ttype}.json'
+            output_path = f'./test_{ttype}_top{num}_{model}.json'
             
             top1LLM(input_path, output_path, num)
             evalACC(output_path)   
