@@ -6,43 +6,6 @@ from transformers import AutoModel, AutoTokenizer
 import torch
 from tqdm import tqdm
 
-def bleu(pathList):
-    for path in pathList:
-        s = 0
-        with open(path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            for item in data:
-                answer = item['answers'][0]
-                sample = SingleTurnSample(
-                    response = answer,
-                    reference= item['LLM']
-                )
-
-                scorer = BleuScore()
-                score = scorer.single_turn_score(sample)
-                s += score
-
-        print(s/len(data))
-
-
-def sp(pathList):
-    for path in pathList:
-        s = 0
-        with open(path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            for item in data:
-                answer = item['answers'][0]
-                sample = SingleTurnSample(
-                    response = answer,
-                    reference= item['LLM']
-                )
-
-                scorer = StringPresence()
-                score = scorer.single_turn_score(sample)
-                s += score
-
-        print(s/len(data))
-
 def rouge(pathList):
     for path in pathList:
         s = 0
@@ -151,8 +114,6 @@ def eval_All(dataList, type='acc'):
             rouge(pathList)
 
 if __name__ == "__main__":
-    base_path = ''
-    methods = ['ours']  
     ttype = 'informal'  # file type: informal  formal  sample50
     model = 'gemma4' # gemma4 gemma12 llama qwen3 qwen7 qwen14
     nums = [5, 10, 20, 30, 40, 50]
@@ -162,7 +123,7 @@ if __name__ == "__main__":
         results = {'acc':0, 'em':0, 'bertscore':0, 'rouge':0}
         for num in nums:
             print(f"-------------Top{num}-------------")
-            path = [f'{base_path}/{ttype}/{method}/ours_test_{ttype}_top{num}_{model}_eval.json']
+            path = [f'./ours_test_{ttype}_top{num}_{model}_eval.json']
             
             results['acc'] = calculateAcc(path)
             results['em'] = em(path)
