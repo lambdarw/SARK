@@ -54,7 +54,7 @@ model = AutoModel.from_pretrained(model_path, trust_remote_code=True).cuda().eva
 model.eval()
 
 query = "what is the capital of the US?"
-passages = ["Washington is the capital of the US.", "Alabama is the largest city in the US.", "California is the largest city in the US."]
+passages = ["Wow, Washington is the capital of the US!!", "GOD, Alabama, is the largest city in the US hh.", "Gee! California is the Largest City in the US?"]
 
 queries_expanded = [query] * len(passages)
 
